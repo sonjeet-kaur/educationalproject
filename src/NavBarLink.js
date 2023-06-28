@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import logoimage from "./Images/logoimage.jpeg";
 import contentimage from './Images/contentimage.png';
-import { Router, Route, Routes } from 'react-router-dom';
+import { Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './Home';
 import About from './About';
 import Map from "./Map";
@@ -104,7 +104,9 @@ const NavbarLink = () => {
         <div>
           <ul className="header-list">
             <li className="site-image">
-              <img src={logoimage} alt="Coreimage" className="logo" />
+              <a href="/home" className="logo">
+                <img src={logoimage} alt="Coreimage" className="logo" />
+              </a>
             </li>
             <li className="list-items">
               <a href="/home">

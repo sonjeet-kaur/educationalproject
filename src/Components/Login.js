@@ -32,7 +32,7 @@ function Login() {
     if (data.status) {
       reset();
       toast("Submitted Successfully!");
-     
+
       setTimeout(() => {
         navigate("/home");
       }, 2000);
@@ -54,24 +54,26 @@ function Login() {
 
           <div className="form-div">
             <div className="form-maindiv">
-              <Form  onSubmit={LoginUser} className="form toastClass" >
-                <Label className="field-label">Enter Email</Label>
-                <Form.Control className="inputfield" type="text" placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} value={email}>
-                </Form.Control>
-                <Label className="field-label">Enter Password</Label>
-                <Form.Control className="inputfield" type={showPassword ? "text" : "password"} placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} value={password}>
-                </Form.Control>
-          <span className="pass-icon" onClick={() => {setShowPassword(!showPassword) }}>
-          {showPassword ? 
-            <VisibilityTwoToneIcon /> :
-            <VisibilityOffTwoToneIcon />  
-        }
-            </span>
-                <div className="btn-div" >
-                  <button className="btn btn-outline-success create-btn login-btn" type="submit">Submit</button>
+              <div className="card login-cardmain ">
+                <Form onSubmit={LoginUser} className="form toastClass" >
+                  <Label className="field-label">Enter Email</Label>
+                  <Form.Control className="inputfield" type="text" placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} value={email}>
+                  </Form.Control>
+                  <Label className="field-label">Enter Password</Label>
+                  <Form.Control className="inputfield" type={showPassword ? "text" : "password"} placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} value={password}>
+                  </Form.Control>
+                  <span className="pass-icon" onClick={() => { setShowPassword(!showPassword) }}>
+                    {showPassword ?
+                      <VisibilityTwoToneIcon /> :
+                      <VisibilityOffTwoToneIcon />
+                    }
+                  </span>
+                  <div className="btn-div" >
+                    <button className="btn btn-outline-success create-btn login-btn" type="submit">Submit</button>
 
-                </div>
-              </Form>
+                  </div>
+                </Form>
+              </div>
             </div>
           </div>
         </div>

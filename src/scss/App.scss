@@ -1,7 +1,7 @@
 @import "./scss/Common.scss";
 
 body.data-theme {
-  background-color: black !important;
+  background-color: $txt-black !important;
 }
 
 .App {
@@ -27,7 +27,7 @@ body.data-theme {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $card-bg;
 }
 
 .App-link {
@@ -71,13 +71,13 @@ body.data-theme {
 .createbutton {
   /* background-color: #ffc103;
 margin-right: 20px;
-color: black;
+color: $txt-black;
 /* color: #ffc103; */
   /* border-color: transparent;
 border-radius: inherit;
 border-radius: 15px;
 border-radius: var(--bs-border-radius-pill)!important;  */
-  color: white;
+  color: $card-bg;
   background-color: darkcyan;
   border-radius: 14px;
   margin-right: 25px;
@@ -85,14 +85,14 @@ border-radius: var(--bs-border-radius-pill)!important;  */
 
 .contentDiv {
   transform: translateZ(0);
-  color: aliceblue;
+  //   color: aliceblue;
   text-align: left;
   font-size: 24px;
   font-family: "DM Sans", sans-serif;
   width: 50%;
   margin-top: 4%;
   text-align: center;
-  color: azure;
+  color: $txt-white;
   font-style: italic;
 }
 
@@ -116,7 +116,7 @@ border-radius: var(--bs-border-radius-pill)!important;  */
 }
 
 .pragraphdiv {
-  color: white;
+  color: $card-bg;
   display: flex;
   margin-left: 41px;
   font-size: 1.5rem;
@@ -124,7 +124,7 @@ border-radius: var(--bs-border-radius-pill)!important;  */
 
 .editordiv {
   display: flex;
-  color: lavender;
+  color: $txt-white;
   font-size: 20px;
   position: relative;
   z-index: 1;
@@ -192,7 +192,7 @@ border-radius: var(--bs-border-radius-pill)!important;  */
 .cardbody span {
   font-size: 15px !important;
   /* margin-left: 29px; */
-  color: #8480ae;
+  color: $card-content;
   margin-top: 20px;
 }
 
@@ -383,7 +383,7 @@ border-radius: var(--bs-border-radius-pill)!important;  */
 }
 
 .price-value {
-  color: #c2d4f8;
+  color: $version;
   text-align: right;
 }
 
@@ -537,7 +537,7 @@ margin-right: 53px !important;
 
 .short-card-company {
   font-size: 11px;
-  color: white;
+  color: $card-bg;
 }
 
 .short-card-profilename {
@@ -671,7 +671,7 @@ margin-right: 53px !important;
 .live-card-botom-span {
   display: block !important;
   font-size: 12px !important;
-  color: white;
+  color: $card-bg;
   margin-left: 24px;
 }
 
@@ -747,7 +747,7 @@ margin-right: 53px !important;
 
 .nft-card .img-wrap .bid-ends div span {
   font-size: 14px;
-  color: white;
+  color: $card-bg;
   font-weight: 700;
   display: block;
 }
@@ -786,7 +786,7 @@ margin-right: 53px !important;
   margin-left: 0.5rem !important;
   border-color: rgb(194 212 248 / 30%);
   background-color: cornflowerblue;
-  color: black;
+  color: $txt-black;
   width: 86px;
   height: 42px;
 }
@@ -801,17 +801,16 @@ margin-right: 53px !important;
   width: 66px !important;
   font-size: 14px !important;
   border-radius: 15px !important;
-  color: white !important;
-
+  color: $txt-white !important;
 }
 
 .logo-image {
   height: 55px !important;
-  background-color: white !important;
+  background-color: $card-bg !important;
 }
 
 .pragraph {
-  color: #8480ae;
+  color: $footer-info;
   font-size: 20px !important;
   /* margin-top: 37px !important; */
   padding: 0px 20px;
@@ -819,26 +818,26 @@ margin-right: 53px !important;
 
 .contact {
   font-size: 20px;
-  color: #8480ae;
+  color: $footer-info;
 
 }
 
 .for-contact {
   font-size: 24px;
-  color: #8480ae;
+  color: $footer-info;
   padding: 6% 30px !important;
 }
 
 .footer-li-item {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #8480ae;
+  color: $footer-info;
 
 }
 
 .footer-ryt-first {
   font-size: 24px !important;
-  color: #c2d4f8;
+  color: $footer-heading;
   margin-left: 9px !important;
 }
 
@@ -1068,7 +1067,7 @@ margin-right: 53px !important;
 }
 
 .main_row_div {
-  background-color: black !important;
+  background-color: $txt-black !important;
 }
 
 .page_cards {
@@ -1107,14 +1106,6 @@ margin-right: 53px !important;
   background-color: currentcolor;
 }
 
-.nav-background-img {
-  background-image: url("Images/nav-back-img.jpeg");
-  position: relative !important;
-  background-size: cover !important;
-  background-position: center !important;
-  opacity: 0.76;
-}
-
 .header-list {
   list-style: none;
   display: flex;
@@ -1147,7 +1138,7 @@ margin-right: 53px !important;
 
 .list-items a {
   text-decoration: none;
-  color: aliceblue;
+  color: $txt-white;
 }
 
 .list-items>a:hover {
@@ -1246,24 +1237,24 @@ margin-right: 53px !important;
   font-size: 16px;
   color: #8480ae;
   margin-top: 12%;
-  margin: 47px 59px 52px 59px;
+  margin-left: 20%;
 
 }
 
 .placeOrder {
-  color: white;
+  color: $card-bg;
   text-decoration: none;
 }
 
 .inputfield {
-  width: 339px !important;
+  width: 300px !important;
   margin-bottom: 22px;
-  background-color: black !important;
-  color: white !important;
+  background-color: $txt-black !important;
+  color: $card-bg !important;
   font-style: oblique;
   font-size: 15px !important;
   border-radius: 9px !important;
-  height: 54px !important;
+  height: 45px !important;
   border: 1px solid grey;
 
 }
@@ -1275,7 +1266,7 @@ margin-right: 53px !important;
 
 .inputfield:focus-visible {
   outline: none;
-  border: 1px solid white !important;
+  border: 1px solid $card-bg !important;
 }
 
 .form-maindiv {
@@ -1286,14 +1277,14 @@ margin-right: 53px !important;
 }
 
 .field-label {
-  color: white;
+  color: $card-bg;
   font-size: 16px;
 }
 
 .submit-btn {
   background-color: darkcyan !important;
   font-size: 18px !important;
-  border-color: black !important;
+  border-color: $txt-black !important;
   width: 122px !important;
   border-radius: 14px !important;
 }
@@ -1517,17 +1508,8 @@ margin-right: 53px !important;
 }
 
 .login-btn {
-  height: 49px !important;
-  width: 179px !important;
+  width: 146px !important;
   font-size: 18px !important;
-  border: aliceblue !important;
-  background-color: cadetblue !important;
-
-  &:hover {
-    background-color: #012925 !important;
-    border: aliceblue !important;
-  }
-
 }
 
 .loginout-btn {
@@ -1587,38 +1569,38 @@ margin-right: 53px !important;
 
 .defination {
   font-size: 20px;
-  color: white;
+  color: $txt-white;
   padding: 18px 0px;
 }
 
 .defination-maindiv {
   font-weight: 600;
   font-family: "DM Sans", sans-serif;
-  color: white;
+  color: $txt-white;
   padding: 34px 0px;
 }
 
 .inner-defination {
-  color: white;
+  color: $txt-white;
   padding: 7px 0px;
   font-weight: bold;
 }
 
 .inner-defination-para {
-  color: white;
+  color: $txt-white;
   font-size: 20px !important;
   padding: 27px 0px !important;
 }
 
 .table {
-  border-radius: 1px solid white;
-  color: white;
+  border-radius: 1px solid $card-bg;
+  color: $card-bg;
   width: 76% !important;
   margin: auto !important;
 }
 
 .table-row {
-  color: white;
+  color: $txt-white;
   text-align: center !important;
 }
 
@@ -1646,16 +1628,16 @@ margin-right: 53px !important;
 }
 
 .placebtn a {
-  color: white;
+  color: $txt-white;
   text-decoration: none;
 }
 
 .placebtn>a:hover {
-  color: white !important;
+  color: $card-bg !important;
 }
 
 .map-h1 {
-  color: white;
+  color: $txt-white;
   padding: 69px 0px 0px 175px;
   text-align: center;
 }
@@ -1698,7 +1680,7 @@ margin-right: 53px !important;
 }
 
 .use-channel {
-  color: white;
+  color: $card-bg;
 }
 
 .startl-main {
@@ -1721,7 +1703,7 @@ margin-right: 53px !important;
 }
 
 .mode {
-  color: white;
+  color: $card-bg;
 }
 
 .mode svg {
@@ -1738,45 +1720,4 @@ margin-right: 53px !important;
 .logbtn {
   margin-right: 44px;
   margin-top: 3rem;
-}
-
-.highlight-text {
-  background-color: royalblue;
-}
-
-.highlight-text-home {
-  background-color: #003366 !important;
-
-}
-
-.background-image-about {
-  background-image: url("Images/background-img.jpeg");
-  position: relative !important;
-  background-size: cover !important;
-  background-position: center !important;
-  opacity: 0.76;
-}
-
-.background-image-page {
-  background-image: url("Images/background-img-page.png");
-  position: relative !important;
-  background-size: cover !important;
-  background-position: center !important;
-  opacity: 0.76;
-}
-
-.login-cardmain {
-  height: 358px;
-  width: 473px;
-  margin-top: 44px;
-  margin-left: 11%;
-  background-color: black !important;
-}
-
-.login-back-img {
-  background-image: url("/src/Images/login-back-img.jpeg");
-  position: relative !important;
-  background-size: cover !important;
-  background-position: center !important;
-  opacity: 0.76;
 }

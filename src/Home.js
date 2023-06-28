@@ -1,7 +1,7 @@
 import React from 'react';
 import codingMainImg from "./Images/coding-first-img.jpeg";
 import htmlBook from "./Images/html-book.avif";
-import htmlDevloper from "./Images/html-devloper.jpeg";
+import htmlDevloper from "./Images/html-developer.jpeg";
 import cssDeveloper from "./Images/css-developer.jpeg";
 import jsDeveloper from "./Images/js-developer.jpeg";
 import reactDeveloper from "./Images/react-developer.jpeg";
@@ -20,10 +20,15 @@ import { useState } from 'react';
 function HomePage() {
 
 
-  const [fillHeartColor, setFillHeartColor] = useState(0);
+  const [fillHeartColor, setFillHeartColor] = useState(false);
 
-  const OnHeartIcon = (val) => {
-    setFillHeartColor(val);
+  const OnHeartIcon = () => {
+    {
+      fillHeartColor === false ?
+        setFillHeartColor(true) :
+        setFillHeartColor(false)
+    }
+
   }
 
   return (
@@ -33,9 +38,9 @@ function HomePage() {
           <div className="col-lg-6 col-sm-6 col-md-6 contentDiv">
             Coding creates a set of instructions for computers to follow.
             These instructions determine what actions a computer can and cannot take.
-            Coding allows programmers to build programs, such as websites and apps.
-            Computer programmers can also tell computers how to process data in better,
-            faster ways.
+            Coding allows programmers to build <span className='highlight-text-home'>programs</span>, such as websites and apps.
+            Computer programmers can also tell computers how to <span className='highlight-text-home'>process data in better,
+              faster ways.</span>
           </div>
           <div className="col-lg-6 col-sm-6 col-md-6 imagediv">
             <img src={codingMainImg} className="upper-image" />
@@ -56,8 +61,8 @@ function HomePage() {
                   <div className='high-div'>
                     <span className=''>Info about developer</span>
                   </div>
-                  <div className='hearticondiv' onClick={() => OnHeartIcon(1)}>
-                    {fillHeartColor === 1 ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                  <div className='hearticondiv' onClick={() => OnHeartIcon()}>
+                    {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                   </div>
                 </div>
                 <div className='maincardcontentdiv'>
@@ -92,7 +97,7 @@ function HomePage() {
                 <div className="main-buttondiv">
                   <div className="card-button">
                     <button type="button" className="btn btn-primary btn-md placebtn" >
-                      <a className="short-card-profilename" href="https://en.wikipedia.org/wiki/HTML">Read More</a>
+                      <a className="short-card-profilename" href="https://www.geeksforgeeks.org/html">Read More</a>
                     </button>
                   </div>
                 </div>
@@ -109,7 +114,7 @@ function HomePage() {
                     <span>Info about developer</span>
                   </div>
                   <div className='hearticondiv' onClick={() => OnHeartIcon(2)}>
-                    {fillHeartColor === 2 ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                    {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                   </div>
                 </div>
                 <div className='maincardcontentdiv'>
@@ -145,7 +150,7 @@ function HomePage() {
                 <div className="main-buttondiv">
                   <div className="card-button">
                     <button type="button" className="btn btn-primary btn-md placebtn" >
-                      <a className="short-card-profilename" href={"https://en.wikipedia.org/wiki/CSS"}>Read More</a>
+                      <a className="short-card-profilename" href="https://www.geeksforgeeks.org/css">Read More</a>
                     </button>
                   </div>
                 </div>
@@ -162,7 +167,7 @@ function HomePage() {
                   <span className='text'>Info about developer</span>
                 </div>
                 <div className='hearticondiv' onClick={() => OnHeartIcon(3)}>
-                  {fillHeartColor === 3 ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                  {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                 </div>
               </div>
               <div className='maincardcontentdiv'>
@@ -198,7 +203,7 @@ function HomePage() {
               <div className="main-buttondiv">
                 <div className="card-button">
                   <button type="button" className="btn btn-primary btn-md placebtn" >
-                    <a className="short-card-profilename" href='https://en.wikipedia.org/wiki/JS'>Read More</a>
+                    <a className="short-card-profilename" href='https://www.geeksforgeeks.org/learn-javascript-js-roadmap-for-beginners'>Read More</a>
                   </button>
                 </div>
               </div>
@@ -214,7 +219,7 @@ function HomePage() {
                   <span>Info about developer</span>
                 </div>
                 <div className='hearticondiv' onClick={() => OnHeartIcon(4)}>
-                  {fillHeartColor === 4 ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                  {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                 </div>
               </div>
               <div className='maincardcontentdiv'>
@@ -250,7 +255,7 @@ function HomePage() {
               <div className="main-buttondiv">
                 <div className="card-button">
                   <button type="button" className="btn btn-primary btn-md placebtn">
-                    <a className="short-card-profilename" href='https://en.wikipedia.org/wiki/React'>Read More</a>
+                    <a className="short-card-profilename" href='https://www.geeksforgeeks.org/reactjs-basics-concepts-complete-reference'>Read More</a>
                   </button>
                 </div>
               </div>
@@ -267,7 +272,7 @@ function HomePage() {
                   <span className='text'>Info about developer</span>
                 </div>
                 <div className='hearticondiv' onClick={() => OnHeartIcon(5)}>
-                  {fillHeartColor === 5 ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                  {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                 </div>
               </div>
               <div className='maincardcontentdiv'>
@@ -282,7 +287,8 @@ function HomePage() {
                     <div className='content'>
                       <div className='text' style={{ display: 'flex' }}>
                         <a>
-                          Rasmus Lerdorf
+                          Rasmus
+                          Lerdorf
                         </a>
                       </div>
                       <div className='text'>
@@ -306,7 +312,7 @@ function HomePage() {
               <div className="main-buttondiv">
                 <div className="card-button">
                   <button type="button" className="btn btn-primary btn-md placebtn" >
-                    <a className="short-card-profilename" href='https://en.wikipedia.org/wiki/PHP'>Read More</a>
+                    <a className="short-card-profilename" href='https://www.geeksforgeeks.org/php-tutorial'>Read More</a>
                   </button>
                 </div>
               </div>
@@ -322,7 +328,7 @@ function HomePage() {
                     <span>Info about developer</span>
                   </div>
                   <div className='hearticondiv' onClick={() => OnHeartIcon(6)}>
-                    {fillHeartColor === 6 ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                    {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                   </div>
                 </div>
                 <div className='maincardcontentdiv'>
@@ -358,7 +364,7 @@ function HomePage() {
                 <div className="main-buttondiv">
                   <div className="card-button">
                     <button type="button" className="btn btn-primary btn-md placebtn" >
-                      <a className='about-net' href='https://en.wikipedia.org/wiki/.net'>Read More</a>
+                      <a className='about-net' href='https://www.geeksforgeeks.org/introduction-to-asp-net'>Read More</a>
                     </button>
                   </div>
                 </div>

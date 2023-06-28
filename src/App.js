@@ -1,4 +1,5 @@
 import './App.css';
+// import "./scss/Style.scss";
 import HomePage from './Home';
 import NavBarLink from './NavBarLink';
 import { Route, Routes, BrowserRouter, Outlet } from 'react-router-dom';

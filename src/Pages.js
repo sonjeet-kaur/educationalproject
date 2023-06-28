@@ -4,14 +4,15 @@ import codestep from "./Images/code-stepbystep.jpeg";
 import udemyimg from "./Images/Udemy-img.png";
 import coursera from "./Images/coursera-img.jpeg";
 import startlearn from "./Images/start-learn-logo.png";
+import { Link } from "react-router-dom";
 function Pages() {
   return (
     <>
-      <div className="custom_container all-lang-container vsm">
-        <div className="row">
+      <div className="custom_container all-lang-container vsm ">
+        <div className="row background-image-page">
           <article>
             <h2 className="defination-maindiv">
-              Info for learning coding through the websites and channels
+              Info for learning coding through the websites and channels:
             </h2>
             <p className="defination">
               On internet, there are many channels and websites for learning the coding.
@@ -24,11 +25,13 @@ function Pages() {
             </h2>
             <div className="code-step-maindiv">
               <div>
-                <img src={codestep} className="code-step" />
+                <Link to="https://www.youtube.com/channel/UCvHX2bCZG2m9ddUhwxudKYA" className="code-step">
+                  <img src={codestep} className="code-step" />
+                </Link>
               </div>
               <div className="code-para">
                 <p className="defination para">
-                  The, defination of code step by step is you learn each topic and language step by step like, start from begginning to end.
+                  The, defination of code step by step is you learn each topic and language <span className="highlight-text"> step by step </span> like, start from begginning to end.
                   With coding step by step, we learn why we need to learn programming and what is the benifits of learn.
                   With the help of this channel, we learn different-differernt languages from scratch to advance.
                 </p>
@@ -36,11 +39,13 @@ function Pages() {
             </div>
             <div className="code-step-maindiv">
               <div>
-                <img src={udemyimg} className="code-step" />
+                <Link to="https://youtube.com/channel/UCzw4hbQIePVtyJQzE_F8QDg" className="code-step">
+                  <img src={udemyimg} className="code-step" />
+                </Link>
               </div>
               <div className="code-para">
                 <p className="defination para">
-                  The name “Udemy” is a combination of the words “you” and “academy”.
+                  The name “Udemy” is a combination of the words <span className="highlight-text"> “you” and “academy”</span>.
                   As you can tell, Udemy is all about the education.
                   This is possible with the creation of courses by skilled and
                   expert instructors from around the world.
@@ -51,11 +56,14 @@ function Pages() {
             </div>
             <div className="code-step-maindiv">
               <div>
-                <img src={coursera} className="code-step" />
+                <Link to="https://www.youtube.com/user/coursera" className="code-step">
+                  <img src={coursera} className="code-step" />
+                </Link>
+
               </div>
               <div className="code-para">
                 <p className="defination para">
-                  Coursera meaning is the global online learning platform that offers anyone,
+                  Coursera meaning is the <span className="highlight-text"> global online learning platform</span> that offers anyone,
                   anywhere access to online courses and degrees from world-class universities and companies.
                   Coursera is currently one of the world's largest online course and certificate program platforms.
                   This company offers a large repertoire of options for all types of users. You can take beginner or advanced programs.
@@ -67,12 +75,14 @@ function Pages() {
           <article>
             <div className="startl-main">
               <div>
-                <img src={startlearn} className="code-step"></img>
+                {/* <Link to= "/home" className="code-step"> */}
+                <img src={startlearn} className="code-step" />
+                {/* </Link> */}
               </div>
               <div className="code-para">
                 <h2 className="defination para">
                   You can use any channel for learn any language. These all are the best learning channnel of programming.
-                  You normally write the name of channel on search bar and you see the results.
+                  You normally <span className="highlight-text">write the name of channel on search bar</span> and you see the results or you can simply <span className="highlight-text">click on the image of channel image shown in left side in this page and jumped the clicked channel link directly.</span>
                   Then, you get all the detail of all courses of those channel and you can choose the course which you
                   want to learn.
                 </h2>
