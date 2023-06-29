@@ -100,7 +100,7 @@ const NavbarLink = () => {
       //   </nav> */}
       {/* // </div> */}
 
-      <div className="headermain-div">
+      <div className="headermain-div nav-background-img">
         <div>
           <ul className="header-list">
             <li className="site-image">
