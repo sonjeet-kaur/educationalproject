@@ -132,7 +132,7 @@ function About() {
 
       {/************************ Footer Section **********************/}
       <div className="divider"></div>
-      <div className="footer-div">
+      {/* <div className="footer-div">
         <div className="custom_container vsm">
           <div className="row">
             <div className="col-12 col-lg-5">
@@ -186,7 +186,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </>
   )

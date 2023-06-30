@@ -23,7 +23,7 @@ function Login() {
 
   const LoginUser = async (e) => {
     e.preventDefault();
-    let data = await axios.post("http://localhost:3002/profile", {
+    let data = await axios.post("http://localhost:3000/profile", {
 
       email: email,
       password: password,
@@ -34,9 +34,12 @@ function Login() {
       toast("Submitted Successfully!");
 
       setTimeout(() => {
-        navigate("/home");
+        navigate("/card");
       }, 2000);
       localStorage.setItem("auth", 'true');
+    }
+    else {
+      toast("Something Went Wrong");
     }
   }
 
@@ -82,7 +85,7 @@ function Login() {
 
       {/* *********************** Footer Section ********************** */}
       <div className="divider"></div>
-      <div className="footer-div">
+      {/* <div className="footer-div">
         <div className="custom_container vsm">
           <div className="row">
             <div className="col-12 col-lg-5">
@@ -134,7 +137,7 @@ function Login() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </>
   )

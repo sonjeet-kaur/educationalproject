@@ -94,7 +94,7 @@ function Pages() {
 
       {/************************ Footer Section **********************/}
       <div className="divider"></div>
-      <div className="footer-div">
+      {/* <div className="footer-div">
         <div className="custom_container vsm">
           <div className="row">
             <div className="col-12 col-lg-5">
@@ -148,7 +148,7 @@ function Pages() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

@@ -368,6 +368,10 @@ border-radius: var(--bs-border-radius-pill)!important;  */
 .cardInline {
   border: none !important;
 }
+/* .html-book:hover {
+  transform: scale(1.10) rotate(1deg) !important;
+  transform: scale(1.2) !important;
+} */
 
 .inner-content {
   display: flex;
@@ -1245,7 +1249,7 @@ margin-right: 53px !important;
 }
 
 .toastClass {
-  font-size: 16px;
+  font-size: 16px !important;
   color: #8480ae;
   margin-top: 12%;
   margin: 47px 59px 52px 59px;
@@ -1530,7 +1534,7 @@ margin-right: 53px !important;
   width: 179px !important;
   font-size: 18px !important;
   border: aliceblue !important;
-  background-color: #012925 !important;
+  background-color: #11cc9d !important;
 
   &:hover {
     background-color:  #008271  !important;
@@ -1790,4 +1794,159 @@ margin-right: 53px !important;
   background-size: cover !important;
   background-position: center !important;
   opacity: 0.76;
+}
+.contact svg {
+  margin-right: 10px !important;
+  margin-bottom: 3px !important;
+  font-size: 20px !important;
+  color: cornflowerblue !important;
+  cursor: pointer;
+}
+.contact svg :hover {
+    animation: shake 0.10s !important;
+  }
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(1deg); }
+    10% { transform: translate(-1px, -2px) rotate(1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+
+
+  /* Card CSS */
+
+
+  .card-container {
+    margin-right: 30px !important;
+    max-width:1000px;
+    margin: 46px auto;
+    display:flex;
+    flex-wrap:wrap;
+    /* justify-content:space-around; */
+    text-align: left;
+    justify-content: center;
+  }
+  .card-div {
+
+    width: 40% !important;
+    position:relative;
+    margin:20px 0;
+    width:300px;
+    height:400px;
+    background: #fff;
+    transform-style:preserve-3d;
+    transform:perspective(2000px);
+    transition:1s;
+    box-shadow:inset 100px 0 50px rgba(0,0,0,0.5);
+  }
+
+  .card-div :hover{
+    z-index:1111;
+    transform: perspective(2000px) rotate(0deg);
+    box-shadow:inset 20px 0 50px rgba(0,0,0,0.5);
+  }
+  .img-div {
+    position:relative;
+    width:100%;
+    height:100%;
+    border:1px solid #000;
+    box-sizing:border-box;
+    transform-origin:left;
+    z-index:1;
+    transition:1s;
+  }
+  .img-div img {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  height: 400px!important;
+  }
+.card-div:hover .img-div{
+ transform:rotateY(-135deg);
+ }
+ .card-details {
+  position:absolute;
+  left:0;
+  top:0;
+  box-sizing:border-box;
+  padding:20px 20px 5px 20px;
+  color:#000;
+  background-color: #d492940a !important;
+  height: 400px!important;
+ }
+ .card-details h2 {
+  padding-top: 2px !important;
+  margin:0;
+  padding:0.5em 0;
+  text-transform:uppercase;
+  font-size:2em;
+  color: #e92929c4;
+ }
+ /* .card-details p {
+  margin:0;s
+  padding:0;
+  line-height:25px;
+  font-size:16px;
+  color: white !important;
+ } */
+ .highlight-card-color {
+  background-color:#e5dac8  !important;
+ }
+ .card-para {
+  margin:0;
+  /* padding:0; */
+  line-height:25px;
+  font-size:16px;
+  color: #ec6d70 !important;
+  margin-top: 5% !important;
+ } 
+ .color {
+  color: #e92929c4 !important;
+  
+ 
+   /* transform: perspective(2000px) rotate(7deg) !important;
+   transform-origin: left !important; */
+ }
+ .padding {
+  /* padding-bottom: 10px !important; */
+  margin-bottom: 40px !important;
+  font-style: italic !important;
+ }
+
+ body{
+  margin:0;
+  padding:0;
+  background:#f2f2f2;
+  font-family: 'Acme';
+}
+.visit-btn {
+  position: absolute ;
+    /* bottom: 0px; */
+    top: 98% !important; 
+    /* padding: 10px 25px ; */
+    padding: 11px 43px 9px 39px !important;
+    text-align: center !important;
+    border-radius: 12px !important;
+    background-color: cadetblue !important;
+    font-size: 17px !important;
+}
+.hightlight-visit {
+  background-color: black;
+}
+.text {
+  color: aliceblue !important;
+  padding: 2% 0px 0px 45%;
+  /* font-size: 10px !important; */
 }

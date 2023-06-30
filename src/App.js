@@ -10,6 +10,8 @@ import { ToastContainer } from 'react-toastify';
 import Login from './Components/Login';
 import About from './About';
 import { useEffect, useState } from 'react';
+import Footer from './Footer';
+import Card from './Components/Card';
 
 function App() {
   const [authChecked, setIsAuthChecked] = useState(false);
@@ -23,6 +25,7 @@ function App() {
     <>
       <Outlet />
       <NavBarLink />
+
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Login />} />
@@ -32,8 +35,10 @@ function App() {
           <Route exact path="/map" element={<Map />} />
           <Route exact path="/pages" element={<Pages />} />
           <Route exact path="/order" element={<Order />} />
+          <Route exact path="/card" element={<Card />} />
         </Routes>
       </BrowserRouter>
+      {/* <Footer /> */}
 
       <ToastContainer
         autoClose={2000}

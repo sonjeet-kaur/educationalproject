@@ -13,6 +13,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Login from "./Components/Login";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const NavbarLink = () => {
 
@@ -47,9 +49,11 @@ const NavbarLink = () => {
 
   const logout = async (e) => {
     // e.preventDefault();
-    var data = await axios.get('http://localhost:3002/profile', {
+    var data = await axios.get('http://localhost:3000/profile', {
     })
     if (checkAuth === 'true') {
+    toast("User Logout Sucessfully!");
+    // alert("User Logout Sucessfully!")
       window.location.href = "/login";
       // <Login />
       // navigate("/login");
@@ -146,7 +150,7 @@ const NavbarLink = () => {
 
           <div className="main-btndiv">
             <div className="logbtn">
-              <button className="btn btn-outline-success create-btn loginout-btn" type="submit" onClick={() => logout()}>LogOut
+              <button className="btn btn-outline-success create-btn loginout-btn " type="submit" onClick={() => logout()}>LogOut
                 {/* <a href="/login">Login</a> */}
               </button>
             </div>

@@ -42,7 +42,7 @@ function Admin() {
 
       {/************************ Footer Section **********************/}
       <div className="divider"></div>
-      <div className="footer-div">
+      {/* <div className="footer-div">
         <div className="custom_container">
           <div className="row">
             <div className="col-12 col-lg-5">
@@ -96,7 +96,7 @@ function Admin() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
