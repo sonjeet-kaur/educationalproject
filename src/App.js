@@ -2,7 +2,7 @@ import './App.css';
 // import "./scss/Style.scss";
 import HomePage from './Home';
 import NavBarLink from './NavBarLink';
-import { Route, Routes, BrowserRouter, Outlet } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, Outlet, Router } from 'react-router-dom';
 import Map from "./Map";
 import Pages from './Pages';
 import Order from './Order';
@@ -21,28 +21,46 @@ function App() {
     setIsAuthChecked(checkAuth);
   }, []);
 
+  function LoginLayout() {
+    return (
+      <>
+        <NavBarLink />
+        <Outlet />
+      </>
+    );
+  }
+
+  function PublicLayout() {
+    return (
+      <>
+        <NavBarLink />
+        <Outlet />
+        < Footer />
+      </>
+    )
+  }
+
   return (
     <>
-      <Outlet />
-      <NavBarLink />
-
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Login />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path='/home' element={<HomePage />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/map" element={<Map />} />
-          <Route exact path="/pages" element={<Pages />} />
-          <Route exact path="/order" element={<Order />} />
-          <Route exact path="/card" element={<Card />} />
+          <Route element={<LoginLayout />}>
+            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/card" element={<Card />} />
+          </Route>
+
+          <Route element={<PublicLayout />}>
+            <Route path='/home' element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/map" element={<Map />} />
+            <Route path="/pages" element={<Pages />} />
+            <Route path="/order" element={<Order />} />
+          </Route>
         </Routes>
       </BrowserRouter>
-      {/* <Footer /> */}
 
-      <ToastContainer
-        autoClose={2000}
-      />
+      <ToastContainer autoClose={2000} />
     </>
   );
 }
