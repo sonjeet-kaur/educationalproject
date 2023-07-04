@@ -15,24 +15,30 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import Login from "./Components/Login";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Modal from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
 
 const NavbarLink = () => {
+  const [onOpen, setOnOpen] = useState(false);
 
   // const navigate = useNavigate();
+  const openMobileModal = () => setOnOpen(true);
+  const CloseMobileModal = () => setOnOpen(false);
+
 
   const [theme, setTheme] = useState('dark');
 
-  function headerToggleBtn() {
-    var toggle = document.body;
-    toggle.classList.add("header-show");
-    console.log(toggle);
-    // if(toggle.display === 'block') {
-    //   toggle.display = 'none';
-    // }
-    // else {
-    //   toggle.display = 'block';
-    // }
-  }
+  // function headerToggleBtn() {
+  //   var toggle = document.body;
+  //   toggle.classList.add("header-show");
+  //   console.log(toggle);
+  //   // if(toggle.display === 'block') {
+  //   //   toggle.display = 'none';
+  //   // }
+  //   // else {
+  //   //   toggle.display = 'block';
+  //   // }
+  // }
 
   let modeTheme = localStorage.getItem("mode");
   useEffect(() => {
@@ -52,8 +58,8 @@ const NavbarLink = () => {
     var data = await axios.get('http://localhost:3000/profile', {
     })
     if (checkAuth === 'true') {
-    toast("User Logout Sucessfully!");
-    // alert("User Logout Sucessfully!")
+      toast("User Logout Sucessfully!");
+      // alert("User Logout Sucessfully!")
       window.location.href = "/login";
       // <Login />
       // navigate("/login");
@@ -136,22 +142,14 @@ const NavbarLink = () => {
           </ul>
 
         </div>
-        <div className="menu-icon" onClick={() => headerToggleBtn()}>
-          <MenuIcon />
-        </div>
-        {/* <i onclick={headerToggleBtn}>
-        </i> */}
+
         <div className="searchmain-div">
           <div className="search-div">
-            {/* <button class="btn btn-outline-success create-btn" type="search">Search</button>  */}
-            {/* <input type='text' placeholder='Search'  />
-          <Link to="/"><SearchIcon /></Link> */}
           </div>
 
           <div className="main-btndiv">
             <div className="logbtn">
               <button className="btn btn-outline-success create-btn loginout-btn " type="submit" onClick={() => logout()}>LogOut
-                {/* <a href="/login">Login</a> */}
               </button>
             </div>
             <div className="logbtn mode" onClick={() => modechange()}>
@@ -160,11 +158,42 @@ const NavbarLink = () => {
               }
 
             </div>
+            <div className="menu-icon" >
+              <MenuIcon onClick={openMobileModal} />
+            </div>
           </div>
         </div>
       </div>
 
+      <Modal open={onOpen} onClose={CloseMobileModal}
+        classNames={{
+          modal: "Mobile-Modal"
+        }}
+      // className="Mobile-Modal"
+      >
 
+        <div className='responsive_header'>
+          <div className='unordered_list'>
+            <ul>
+
+              <li><a href="/home">
+                Home
+              </a></li>
+              <li> <a href="/about">
+                About
+              </a></li>
+              <li>  <a href="/map">
+                Map
+              </a></li>
+              <li><a href="/pages">
+                Pages
+              </a></li>
+
+            </ul>
+          </div>
+        </div>
+
+      </Modal>
 
 
 
@@ -172,5 +201,4 @@ const NavbarLink = () => {
   )
 }
 export default NavbarLink;
-
 

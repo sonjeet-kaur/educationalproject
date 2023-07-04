@@ -26,6 +26,7 @@ function App() {
       <>
         <NavBarLink />
         <Outlet />
+        
       </>
     );
   }
@@ -36,6 +37,7 @@ function App() {
         <NavBarLink />
         <Outlet />
         < Footer />
+        < Order />
       </>
     )
   }
@@ -55,7 +57,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/map" element={<Map />} />
             <Route path="/pages" element={<Pages />} />
-            <Route path="/order" element={<Order />} />
+            {/* <Route path="/order" element={<Order />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
