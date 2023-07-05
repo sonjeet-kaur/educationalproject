@@ -19,17 +19,23 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from 'react';
 function HomePage() {
 
+  const [buttonStates, setButtonStates] = useState({
+    button1: false,
+    button2: false,
+    button3: false,
+    button4: false,
+    button5:false,
+    button6:false
+  });
 
-  const [fillHeartColor, setFillHeartColor] = useState(false);
+  const OnHeartIcon = (buttonId) => {
+    setButtonStates((prevButtonStates) => ({
+      ...prevButtonStates,
+      [buttonId]: !prevButtonStates[buttonId],
+    }));
 
-  const OnHeartIcon = () => {
-    {
-      fillHeartColor === false ?
-        setFillHeartColor(true) :
-        setFillHeartColor(false)
-    }
-
-  }
+    console.log('buttonStates',buttonStates);
+  };
 
   return (
     <>
@@ -61,8 +67,8 @@ function HomePage() {
                   <div className='high-div'>
                     <span className=''>Info about developer</span>
                   </div>
-                  <div className='hearticondiv' onClick={() => OnHeartIcon()}>
-                    {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                  <div className='hearticondiv' onClick={() => OnHeartIcon('button1')}>
+                    {buttonStates.button1 === true ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                   </div>
                 </div>
                 <div className='maincardcontentdiv'>
@@ -113,8 +119,8 @@ function HomePage() {
                   <div className='high-div'>
                     <span>Info about developer</span>
                   </div>
-                  <div className='hearticondiv' onClick={() => OnHeartIcon(2)}>
-                    {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                  <div className='hearticondiv' onClick={() => OnHeartIcon('button2')}>
+                    {buttonStates.button2 === true ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                   </div>
                 </div>
                 <div className='maincardcontentdiv'>
@@ -164,10 +170,10 @@ function HomePage() {
             <div className='cardbody'>
               <div className='heartmaindiv'>
                 <div className='high-div'>
-                  <span className='text'>Info about developer</span>
+                  <span className=''>Info about developer</span>
                 </div>
-                <div className='hearticondiv' onClick={() => OnHeartIcon(3)}>
-                  {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                <div className='hearticondiv' onClick={() => OnHeartIcon('button3')}>
+                  {buttonStates.button3 === true ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                 </div>
               </div>
               <div className='maincardcontentdiv'>
@@ -177,8 +183,8 @@ function HomePage() {
                       <img src={jsDeveloper} />
                     </div>
                     <div className='content'>
-                      <div className='text' style={{ display: 'flex' }}>
-                        <a className='js-dev-name'>
+                      <div className="inner-content">
+                        <a >
                           Brendan Eich
                         </a>
                       </div>
@@ -218,8 +224,8 @@ function HomePage() {
                 <div className='high-div'>
                   <span>Info about developer</span>
                 </div>
-                <div className='hearticondiv' onClick={() => OnHeartIcon(4)}>
-                  {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                <div className='hearticondiv' onClick={() => OnHeartIcon('button4')}>
+                  {buttonStates.button4 === true ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                 </div>
               </div>
               <div className='maincardcontentdiv'>
@@ -269,10 +275,10 @@ function HomePage() {
             <div className='cardbody'>
               <div className='heartmaindiv'>
                 <div className='high-div'>
-                  <span className='text'>Info about developer</span>
+                  <span className=''>Info about developer</span>
                 </div>
-                <div className='hearticondiv' onClick={() => OnHeartIcon(5)}>
-                  {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                <div className='hearticondiv' onClick={() => OnHeartIcon('button5')}>
+                  {buttonStates.button5 === true ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                 </div>
               </div>
               <div className='maincardcontentdiv'>
@@ -285,7 +291,7 @@ function HomePage() {
                       <img src={phpDeveloper} />
                     </div>
                     <div className='content'>
-                      <div className='text' style={{ display: 'flex' }}>
+                      <div className="inner-content">
                         <a>
                           Rasmus
                           Lerdorf
@@ -327,8 +333,8 @@ function HomePage() {
                   <div className='high-div'>
                     <span>Info about developer</span>
                   </div>
-                  <div className='hearticondiv' onClick={() => OnHeartIcon(6)}>
-                    {fillHeartColor ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
+                  <div className='hearticondiv' onClick={() => OnHeartIcon('button6')}>
+                    {buttonStates.button6 === true ? <FavoriteIcon className='heartfill' /> : <FavoriteBorderIcon />}
                   </div>
                 </div>
                 <div className='maincardcontentdiv'>

@@ -76,19 +76,21 @@ function Order() {
     }, {
       id: "3",
       message: " hi {previousValue}, how can I help you?",
-      // trigger: "4",
-      end: true
+      trigger: "4",
+    
     },
-    //   {
-    //     id: '4',
-    //     options: [
+      {
+        id: '4',
+        options: [
 
-    //         { value: 1, label: 'View Courses', trigger: '5' },
-    //         { value: 2, label: 'Read Articles', trigger: '6' },
+            {value: 1, label: <a href="https://www.geeksforgeeks.org/html">View Courses</a>  } ,
+            // { value: 2, label: 'Read Articles' },
 
-    //     ],
+        ],
+        end: true
 
-    // }, {
+    }, 
+    // {
     //   id:'5',
     //   message: "You selected View Courses" ,
     //   end: true,
