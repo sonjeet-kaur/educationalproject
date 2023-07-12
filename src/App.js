@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import Footer from './Footer';
 import Card from './Components/Card';
 
+
 function App() {
   const [authChecked, setIsAuthChecked] = useState(false);
 
@@ -59,6 +60,7 @@ function App() {
             <Route path="/pages" element={<Pages />} />
             {/* <Route path="/order" element={<Order />} /> */}
           </Route>
+
         </Routes>
       </BrowserRouter>
 

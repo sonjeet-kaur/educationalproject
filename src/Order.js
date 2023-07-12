@@ -1,5 +1,5 @@
 import { Label } from "@fluentui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
@@ -45,6 +45,10 @@ function Order() {
     floating: true,
   };
 
+  // useEffect(() => {
+  //   steps = {};
+  // }, [])
+
   const theme = {
     
     background: "#0b2b23",
@@ -76,20 +80,21 @@ function Order() {
     }, {
       id: "3",
       message: " hi {previousValue}, how can I help you?",
-      trigger: "4",
+      // trigger: "4",
+      end: true
     
     },
-      {
-        id: '4',
-        options: [
+    //   {
+    //     id: '4',
+    //     options: [
 
-            {value: 1, label: <a href="https://www.geeksforgeeks.org/html">View Courses</a>  } ,
-            // { value: 2, label: 'Read Articles' },
+    //         {value: 1, label: <a href="https://www.geeksforgeeks.org/html">View Courses</a>  } ,
+    //         // { value: 2, label: 'Read Articles' },
 
-        ],
-        end: true
+    //     ],
+   
 
-    }, 
+    // }, 
     // {
     //   id:'5',
     //   message: "You selected View Courses" ,
@@ -119,11 +124,36 @@ function Order() {
 
       <div>
       <ThemeProvider theme={theme}>
-      <ChatBot
+      {/* <ChatBot
           headerTitle="ChatBot"
           steps={steps}
           //  handleEnd={handleEnd}
           {...config}
+        /> */}
+        <ChatBot
+          // handleEnd={this.handleEnd}
+          steps={[
+            {
+              id: '1',
+              message: 'Pick a number',
+              trigger: '2',
+            },
+            {
+              id: '2',
+              options: [
+                { value: '1', label: '1', trigger: '3' },
+                { value: '2', label: '2', trigger: '3' },
+                { value: '3', label: '3', trigger: '3' },
+                { value: '4', label: '4', trigger: '3' },
+                { value: '5', label: '5', trigger: '3' },
+              ],
+            },
+            {
+              id: '3',
+              message: 'A callback message was called!',
+              end: true,
+            },
+          ]}
         />
       </ThemeProvider>
       </div>
